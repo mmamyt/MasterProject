@@ -7,6 +7,9 @@ public class MethodsFromCodingBat {
 
         System.out.println(MethodsFromCodingBat.nTwice("Christmas", 3));
 
+        int [] ddd = {12, 5, 4};
+        MethodsA ob1 = new MethodsA();
+        ob1.maximum(ddd);
     }
 
     //twoChar method
