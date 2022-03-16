@@ -20,5 +20,8 @@ public class EmployeeContractor extends Employee{
 
         EmployeeContractor Bob = new EmployeeContractor("Bob", 75, 40);
         System.out.println(Bob.calculateSalary());
+
+        EmployeeContractor Jessy = new EmployeeContractor("Jessy", 100, 40);
+        System.out.println(Jessy.calculateSalary());
     }
 }
