@@ -1,8 +1,11 @@
 package march;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class ExceptionHandling {
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
     /*    try {
             String str = "Hello";
             System.out.println(str.charAt(2));
@@ -21,17 +24,30 @@ public class ExceptionHandling {
         }*/
 
 
-        int a = 9, b = 6;
-        int sum = a + b;
-        String sumStr = String.valueOf(String.valueOf(sum).length());
-        String aStr = String.valueOf(String.valueOf(a).length());
-        if(sumStr.equals(aStr)){
-            System.out.println(sum);
-        } else System.out.println(a);
+
+       try {
+            System.out.print("Enter a name: ");
+            String name = sc.nextLine();
+            System.out.print("Enter your age: ");
+            int age = sc.nextInt();
+            System.out.println("You entered: " + name + "\nEntered age " + age);
+        } catch(InputMismatchException e){
+            System.out.println("Something went wrong " + e);
+        }
 
 
-        int max = Math.max(Math.max(3, 9),6);
+/*        try {
+            System.out.print("Enter number one: ");
+            int numOne = sc.nextInt();
+            System.out.print("Enter number two: ");
+            int numTwo = sc.nextInt();
+            int result = numOne / numTwo;
+            System.out.println(result);
+        } catch(Exception e){
+            System.out.println("Something is wrong " + e);
+        } finally{
+            System.out.println("Finally is executed");
+        }*/
 
-        System.out.println(max);
     }
 }
